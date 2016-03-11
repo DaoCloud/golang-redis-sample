@@ -26,6 +26,6 @@ test:
 
 build:
     image:
-        dockerfile_path: Dockerfile.normal
+        dockerfile_path: Dockerfile
         build_dir: /
         cache: true
