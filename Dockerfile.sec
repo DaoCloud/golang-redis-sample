@@ -1,6 +1,0 @@
-FROM busybox
-
-ADD go/bin/app /usr/bin/app
-
-EXPOSE 80
-CMD /usr/bin/app

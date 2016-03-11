@@ -25,15 +25,7 @@ test:
         - go test golang-redis-sample
 
 build:
-    lite_image:
-        compile:
-            dockerfile_path: Dockerfile
-            build_dir: /
-            cache: true
-        extract:
-            - /go/bin/app
-        
-        package:
-              dockerfile_path: Dockerfile.sec
-              build_dir: /
-              cache: true
+    image:
+        dockerfile_path: Dockerfile.normal
+        build_dir: /
+        cache: true
