@@ -1,5 +1,7 @@
-FROM golang:1.3-onbuild
+FROM golang:1.5.1
 
 MAINTAINER Sakeven "sakeven.jiang@daocloud.io"
 
-EXPOSE 80
+ADD . $GOPATH/src/app
+RUN go get app
+RUN CGO_ENABLED=0 go install -a app
